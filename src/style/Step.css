@@ -1,0 +1,85 @@
+.step {
+    max-width: 1119px;
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+input:focus{
+    border: #1d1d1d 3px solid;
+}
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.collumn div:last-of-type {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+textarea{
+    margin-top: auto;
+    margin-bottom: 0;
+    height: 157px;
+    resize: none;
+    border: 1px solid #CFCFCF;
+}
+
+.inputField, textarea, select, option {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: var(--font1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%;
+    color: #1d1d1d;
+    opacity: 0.7;
+    width: 498px;
+}
+
+.inputField input, textarea, select {
+    /* border: 1px solid rgba(0, 0, 0, 0.19); */
+    border: 1px solid #CFCFCF;
+    border-radius: 6px;
+    padding: 20px 18px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #1d1d1d;
+    box-sizing: border-box;
+}
+
+/* #textarea input {
+    height: 157px;
+} */
+
+
+
+@media screen and (max-width: 1060px) {
+    .progressBar{
+        position: static;
+    }
+    .collumn div:last-of-type {
+        margin-top: 0;
+    }
+    .step {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .collumn{
+        width: 100%;
+    }
+    .inputField {
+        width: 100%;
+    }
+    .inputField, textarea, select, option {
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,45 @@
+.stepFooter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 20px;
+    margin-top: 94px;
+}
+
+.progressBar {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.progressBar span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    width: 40px;
+    height: 40px;
+    background: rgba(245, 245, 245, 0);
+}
+
+@media screen and (max-width: 1060px) {
+    .stepFooter {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .nexStep {
+        margin-top: 20px;
+    }
+
+    .progressBar {
+        position: static;
+        transform: none;
+    }
+}

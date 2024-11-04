@@ -1,0 +1,19 @@
+.isError{
+    position: relative;
+}
+.isError span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    right: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 149%;
+    text-align: right;
+    color: #be1f2a;
+    padding: 5px;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 5px;
+}
