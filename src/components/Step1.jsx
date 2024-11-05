@@ -39,12 +39,20 @@ function Step1() {
     });
   };
 
+  // const isFormValid = () => {
+  //   return requiredFields.every((field) => {
+  //     const value = formData[field];
+  //     return value && value.trim() !== '';
+  //   });
+  // };
   const isFormValid = () => {
     return requiredFields.every((field) => {
-      const value = formData[field];
+      var value = formData[field];
+      if (field.toString() == 'unf'){ return value && value.replace(/\D/g, '').length === 14; }
       return value && value.trim() !== '';
     });
   };
+
 
   return (
     <>

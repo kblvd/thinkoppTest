@@ -14,7 +14,7 @@ function App() {
     return savedData ? JSON.parse(savedData) : {};
   });
 
-  const totalSteps = 2;
+  const totalSteps = 5;
 
   useEffect(() => {
     localStorage.setItem('formData', JSON.stringify(formData));

@@ -37,35 +37,44 @@ function Step2() {
   };
 
   return (
-    <div>
-      <h2>Шаг 2: Ваш любимый фильм</h2>
-      <div>
-        <label>Любимый фильм:</label>
-        <ValidatedInput
-          name="favoriteMovie"
-          value={favoriteMovie}
-          onChange={handleChange}
-          placeholder="Любимый фильм"
-          required
-        />
+    <>
+      <div className='step'>
+        <div className='inputField'>
+          <label>Любимый фильм:</label>
+          <ValidatedInput
+            name="favoriteMovie"
+            value={favoriteMovie}
+            onChange={handleChange}
+            placeholder="Любимый фильм"
+            required
+          />
+        </div>
       </div>
-      <button onClick={handleBack}>Назад</button>
-      <button
-        onClick={handleNext}
-        // disabled={favoriteMovie.trim() === ''}
-        style={{
-          backgroundColor: favoriteMovie.trim() ? 'blue' : 'grey',
-          color: 'white',
-          marginLeft: '10px',
-        }}
-      >
-        Далее
-      </button>
-      <button onClick={handleCancel} style={{ marginLeft: '10px' }}>
-        Отменить заполнение
-      </button>
+      {/* <button onClick={handleBack}>Назад</button> */}
+      <div className='stepFooter'>
       <ProgressBar currentStep={2} totalSteps={totalSteps} />
-    </div>
+      <button
+        className='nexStep'
+        onClick={handleNext}
+        style={{
+          backgroundColor: '#efefef',
+          color: '#ACACAC'
+        }}>
+        Следующий шаг
+        <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style={{
+            stroke: '#ACACAC'
+          }}>
+          <path d="M1.13385 7.99999L17.2294 7.99999M17.2294 7.99999L10.3313 1.11252M17.2294 7.99999L10.3313 14.8875" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      </div>
+      {/* <button onClick={handleCancel} style={{ marginLeft: '10px' }}>
+        Отменить заполнение
+      </button> */}
+
+
+    </>
   );
 }
 
